@@ -1,0 +1,206 @@
+KRYPTON: Level 0 --> Level 1 Walkthrough Report
+Step-by-step solution:
+1. Identifying the encoding:
+   - The string had an `=` at the end and looked like a typical Base64 encoded string.
+   - Used the following command to decode it:
+     echo S1JZUFRPTklTR1JFQVQ= | base64 -d
+   - The output was:
+     KRYPTONISGREAT
+2. Logged into the given krypton server:
+  - Used the SSH command to connect to the Krypton 1 level:
+     ssh -p 2231 krypton1@krypton.labs.overthewire.org
+  - Entered the password obtained from Level 0: `KRYPTONISGREAT`
+Tools Used:
+  - Linux Terminal
+Logic:
+  - Recognized the encoded format as Base64.
+  - Used standard Unix tools (`echo`, `base64`) to decode the password.
+  - Used ('ssh') to Login.
+
+KRYPTON: Level 1 --> Level 2 Walkthrough Report
+Step-by-step solution:
+1. Logging into the krypton1 server:
+   - Performed in Level 0
+2. Moving into the /krypton/ directory and listing the different directories present in /krypton/ directory
+   - Used cd /krypton/
+   - Used ls
+3.Moving into the krypton1 directory and listing the different directories present in krypton1 directory
+   - Used cd krypton1
+   - Used ls
+4.Reading the content of the files present in krypton1 directory
+   -Used cat krypton2, cat README
+5.By Reading the krypton2 I got the "YRIRY GJB CNFFJBEQ EBGGRA" code.
+6.By Reading the READNE content I understood that it is in the form of ROT13 endcoding.
+7.Used the ROT13 decoder to decode the code and the answer is LEVEL TWO PASSWORD ROTTEN.
+Tools Used:
+  - Linux terminal
+  - An open-source tool (ROT-13 Converter) to decode the text
+Logic:
+  - Recognized the different Directories
+  - Used standart unix tools (cd,ls,cat)
+  - Recognized the question and found that text is encoded in ROT13 cipher text
+  - Researched about the ROT13 Encryption
+  - Used an Online tool to decode the  encoded text and found the password to level 2
+
+KRYPTON: Level 2 --> Level 3 Walkthrough Report
+Step-by-step solution:
+1. Logging into the krypton2 server:
+   - Logged in Using the Level 2 password "ROTTEN"
+2. Moving into the /krypton/ directory and listing the different directories present in /krypton/ directory
+   - Used cd /krypton/
+   - Used ls
+3.Moving into the krypton2 directory and listing the different directories present in krypton1 directory
+   - Used cd krypton2
+   - Used ls
+4.Reading the content of the files present in krypton1 directory
+   -Used cat krypton3, cat README
+5.By Reading the krypton3 I got the "OMQEMDUEQMEK" code.
+6.By Reading the README content I understood that it is in the form of "ROT13 Ceaser Cipher" encoding.
+7.Used the ROT13 Caesar Cipher decoder to decode the code and the answer is (CEASERISEASY).
+Tools Used:
+  - Linux terminal
+  - A open-source tool (ROT-13 Ceaser cipher Converter) to decode the text
+Logic:
+  - Recognized the different Directories
+  - Used standard unix tools (cd,ls,cat).
+  - Recognized the README file and found that text is encoded in ROT13 ceaser cipher text
+  - Researched about the ROT13 ceaser cipher Encryption
+  - Used an Online tool to decode the encoded text and found the password to level 3
+
+KRYPTON: Level 3 --> Level 4 Walkthrough Report
+Step-by-step solution:
+1. Logging into the krypton3 server:
+   - Logged in Using the Level 3 password "CEASERISEASY"
+2. Moving into the /krypton/ directory and listing the different directories present in /krypton/ directory
+   - Used cd /krypton/
+   - Used ls
+3.Moving into the krypton4 directory and listing the different directories present in krypton1 directory
+   - Used cd krypton4
+   - Used ls
+4.Reading the content of the files present in krypton1 directory
+   -Used cat krypton4, cat README
+5.By Reading the krypton4 I got the "KSVVW BGSJD SVSIS VXBMN YQUUK BNWCU ANMJS" code.
+6.By Reading the HINT1&HINT2 file content I understood that it is in the form of "Frequency Analysis" encoding.
+7.Read the rest of the found's file and understood that this forms a paragraph and decoded them using online tool and found the answer for Level 4 ("BRUTE").
+Tools Used:
+  - Linux terminal
+  - An open-source tool (quipquip.com) to decode the text
+
+Logic:
+  - Recognized the different Directories
+  - Used standard unix tools (cd,ls,cat).
+  - Recognized the HINT files and found that text is encoded in Frequency analysis encoding.
+  - Researched about the Frequency Analysis Encryption
+  - Used an Online tool to decode the encoded text and found the password to level 4
+
+
+KRYPTON: Level 4 --> Level 5 Walkthrough Report
+Step-by-step solution:
+1. Logging into the krypton4 server:
+   - Logged in Using the Level 4 password "BRUTE"
+2. Moving into the /krypton/ directory and listing the different directories present in /krypton/ directory
+   - Used cd /krypton/
+   - Used ls
+3.Moving into the krypton4 directory and listing the different directories present in krypton1 directory
+   - Used cd krypton4
+   - Used ls
+4.Reading the content of the files present in krypton1 directory
+   -Used cat krypton5, cat README
+5.By Reading the krypton5 I got the "HCIKV RJOX" code.
+6.By Reading the HINT file content I understood that it has a Specific key length.
+7.Read the rest of the found's file and understood that this forms a paragraph and decoded the them using online tool and found the KEY ("FREKEY").
+8.Used the given code "HCIKV RJOX" and KEY ("FREKEY") found the password for level 5 ("CLEARTEXT").
+
+Tools Used:
+  - Linux terminal
+  - A open-source tool (dcode.com) to decode the text
+Logic:
+  - Recognized the different Directories
+  - Used standard unix tools (cd,ls,cat).
+  - Recognized the HINT files and found that text is encoded in  Vigenère Cipher encoding.
+  - Researched about the Vigenère Cipher Encryption
+  - Used an Online tool to decode the encoded text and found the password to level 5.
+
+KRYPTON: Level 5 --> Level 6 Walkthrough Report
+Step-by-step solution:
+1. Logging into the krypton5 server:
+   - Logged in Using the Level 5 password "CLEARTEXT"
+2. Moving into the /krypton/ directory and listing the different directories present in /krypton/ directory
+   - Used cd /krypton/
+   - Used ls
+3.Moving into the krypton5 directory and listing the different directories present in krypton1 directory
+   - Used cd krypton5
+   - Used ls
+4.Reading the content of the files present in krypton1 directory
+   -Used cat krypton6, cat README
+5.By Reading the krypton6 I got the "BELOS Z" code.
+6.By Reading the README file content I understood that it has a Unknown key length.
+7.Read the rest of the found's file and understood that this forms a paragraph and decoded the them using online tool and found the KEY ("KEYLENGTH").
+8.Used the given code "BELOS Z" and KEY ("KEYLENGTH") found the password for level 5 ("RANDOM").
+Tools Used:
+  - Linux terminal
+  - A open-source tool (dcode.com) to decode the text
+Logic:
+  - Recognized the different Directories
+  - Used standard unix tools (cd,ls,cat).
+  - Recognized the HINT files and found that text is encoded in  Vigenère Cipher encoding.
+  - Researched about the Vigenère Cipher Encryption
+  - Used an Online tool to decode the encoded text and found the password to level 6.
+
+
+KRYPTON: Level 6 ? Level 7 Walkthrough Report
+Step-by-Step Commands, Tools, and Logic
+1. SSH into Krypton Level 6
+Explanation:
+Used `ssh` with custom port 2231 to access Krypton Level 6 on OverTheWire. Credentials come from the previous level.
+2. Navigating to Krypton Directory
+Commands:
+cd /krypton/
+cd krypton6
+
+Explanation:
+Moved into the directory containing encryption tools and the key file.
+3. Listing Files in the Directory
+Explanation:
+Listed files to verify presence of encrypt6 and keyfile.dat.
+4. Creating a Temporary Working Directory
+Explanation:
+Created and navigated to a temp directory to avoid modifying original files.
+5. Linking Key File
+Explanation:
+Created a symbolic link to the keyfile in the working directory.
+6. Changing Directory Permissions
+Explanation:
+Granted full permissions to the directory to prevent permission issues.
+7. Creating Plaintext File
+Explanation:
+Created a plaintext file to test how the encryption works.
+8. Encrypting the File
+Explanation:
+Used encrypt6 to encrypt tale.txt using keyfile.dat; output saved as ciphertale.
+9. Viewing Binary Representation
+Explanation:
+Used xxd to compare the binary versions of plaintext and ciphertext.
+10. Creating a File with Repeating Characters
+Explanation:
+Created a file containing only 'A's to reverse engineer character mapping
+11. Viewing Encrypted Output (Optional / Needs correction)
+Note:
+File name may be incorrect unless a.txt was encrypted and saved as ciphera.txt.
+
+12. Decoding the Final Message
+Explanation:
+Used a Python script to decode the encrypted message using character substitution logic.
+Logic Behind the Solution
+- The level is based on a substitution cipher using a keyfile (keyfile.dat).
+- By encrypting known input (e.g. a string of 'A's), the cipher key can be reverse engineered.
+- Once the substitution mapping is discovered, encrypted messages like "EICTDGYIYZKTHNSIRFXYCPFUEOCKRN" can be decrypted using a script.
+- The decrypted message gives the password to Krypton Level 7.
+Tools Used
+- ssh – for remote login
+- nano – text editor for creating files
+- encrypt6 – encryption program provided by OverTheWire
+- xxd – to view binary representation of files
+- Python 3 – for writing and running decryption script
+- chmod, ln, mktemp – Linux utilities for file and permission management 
+
