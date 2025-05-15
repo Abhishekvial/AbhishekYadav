@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GNN Zero-Day Risk Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🧠 GNN Zero-Day Risk Analyzer</h1>
+    <p>Analyze vulnerabilities using a Graph Neural Network model.</p>
+  </header>
+
+  <main class="container">
+    <section class="analyzer-box">
+      <label for="input">Enter Vulnerability Description</label>
+      <textarea id="input" placeholder="e.g. Remote code execution vulnerability."></textarea>
+      <button onclick="analyze()">Analyze with GNN</button>
+    </section>
+
+    <div class="loader" id="loader">Analyzing with GNN...</div>
+
+    <section class="result-box" id="result" style="display: none;">
+      <h2>🔍 GNN Result</h2>
+      <div class="result-row"><strong>Risk Level:</strong> <span id="risk"></span></div>
+      <div class="result-row"><strong>Prediction Confidence:</strong> <span id="confidence"></span></div>
+      <div class="result-row"><strong>Graph Features Used:</strong> <span id="features"></span></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 GNN Analyzer · Built by Abhishek Yadav</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
